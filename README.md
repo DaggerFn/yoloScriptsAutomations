@@ -16,6 +16,6 @@ Este repositório contém uma coleção de scripts Python para facilitar e autom
 Clone este repositório e instale os requisitos necessários:
 
 ```bash
-git clone git@github.com:DaggerFn/yoloScriptsAutomations.git
-cd yolo-utils
+git clone https://github.com/DaggerFn/yoloScriptsAutomations.git
+cd yoloScriptsAutomations
 pip install -r requirements.txt
