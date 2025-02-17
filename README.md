@@ -1,6 +1,4 @@
-# yoloScriptsAutomations
-
-# YOLO Utils - Ferramentas para Treinamento e Detecção
+# YoloScriptsAutomations - Ferramentas para Treinamento e Detecção
 
 Este repositório contém uma coleção de scripts Python para facilitar e automatizar processos no YOLO, incluindo funções utilitárias, scripts de treinamento, detecção e anotação de objetos.
 
