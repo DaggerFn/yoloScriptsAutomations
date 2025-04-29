@@ -1,16 +1,15 @@
 import os
 import cv2
-import torch
 from ultralytics import YOLO
 
 # Carregar o modelo YOLO pré-treinado
-model = YOLO(r'modelo_linha_final.pt')  # Substitua pelo caminho do seu modelo treinado
+model = YOLO(r'C:\Users\gustavonc\linha_11m.pt')  # Substitua pelo caminho do seu modelo treinado
 
 # Pasta onde estão suas imagens não anotadas
-image_folder = r'C:\Users\gustavonc\Desktop\test\picture'
+image_folder = r'C:\Users\gustavonc\Pictures\1- Treinamento YOLO WSFM\todos_postos\treino-2\filter\p6'
 
 # Pasta para salvar as anotações geradas automaticamente
-output_folder = r'C:\Users\gustavonc\Desktop\test\label'
+output_folder = r'C:\Users\gustavonc\Pictures\1- Treinamento YOLO WSFM\todos_postos\treino-2\filter\p6'
 if not os.path.exists(output_folder):    os.makedirs(output_folder)
 
 # Função para salvar as anotações em formato YOLO

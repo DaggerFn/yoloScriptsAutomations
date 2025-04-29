@@ -3,12 +3,12 @@ import random
 import shutil
 
 # Caminho para a pasta que contém suas imagens e labels
-data_path = r'C:\Users\gustavonc\Downloads\big_model_L1'
+data_path = r'C:\Users\gustavonc\Downloads\AutoAnnotate\labels'
 
 # Define os diretórios de treino, validação e teste
-train_dir = r'C:\Users\gustavonc\Downloads\treinar_yolov8-main\data\box\train\all'
-valid_dir = r'C:\Users\gustavonc\Downloads\treinar_yolov8-main\data\box\valid\all'
-test_dir = r'C:\Users\gustavonc\Downloads\treinar_yolov8-main\data\box\test\all'
+train_dir = r'C:\Users\gustavonc\Downloads\AutoAnnotate\yolo_dataset\train'
+valid_dir = r'C:\Users\gustavonc\Downloads\AutoAnnotate\yolo_dataset\valid'
+test_dir = r'C:\Users\gustavonc\Downloads\AutoAnnotate\yolo_datasetz\test'
 
 # Cria os diretórios de treino, validação e teste se não existirem
 os.makedirs(train_dir, exist_ok=True)
@@ -19,10 +19,10 @@ os.makedirs(test_dir, exist_ok=True)
 all_files = os.listdir(data_path)
 image_files = [f for f in all_files if f.endswith('.jpg')]  # ajuste a extensão se necessário
 
-# Define a proporção para treino, validação e teste (ex.: 70% treino, 15% validação, 15% teste)
-train_ratio = 0.7
-valid_ratio = 0.15
-test_ratio = 0.15
+# Define a proporção para treino, validação e teste (ex.: 90% treino, 5% validação, 5% teste)
+train_ratio = 0.9
+valid_ratio = 0.05
+test_ratio = 0.05
 
 # Aleatoriza a lista de arquivos de imagem
 random.shuffle(image_files)

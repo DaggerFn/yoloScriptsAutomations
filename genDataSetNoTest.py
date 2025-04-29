@@ -3,7 +3,7 @@ import random
 import shutil
 
 # Caminho para a pasta que contém suas imagens e labels
-data_path = r'C:\Users\gustavonc\imagens_coletadas\imgs_coletadas2'
+data_path = r'C:\Users\gustavonc\Downloads\imgs'
 
 # Define os diretórios de treino e validação
 train_images_dir = os.path.join('data/train/images')

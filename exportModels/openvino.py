@@ -1,21 +1,16 @@
 from ultralytics import YOLO
+
 # Load a YOLOv8n PyTorch model
-model = YOLO(r"pt\linha_11m.pt")
+model = YOLO(r"C:\Users\gustavonc\Downloads\linha1_2-train_11m.pt")
 
 # Export the model
-#model.export(format="openvino")  # creates 'yolov8n_openvino_model/'
-model.export(format='openvino')#, imgsz=(512))
+model.export(format="openvino")  # creates 'yolov8n_openvino_model/'
 
-"""
 # Load the exported OpenVINO model
-
-ov_model = YOLO("humanDetectionFineTuned3_openvino_model")
+ov_model = YOLO("yolov8n_openvino_model/")
 
 # Run inference
-results = ov_model("imagens/img2.jpg")
+results = ov_model("https://ultralytics.com/images/bus.jpg")
 
-for result in results:
-    #print(result.boxes)  # Print detection boxes
-    result.show()  # Display the annotated image
-    result.save(filename="result2.jpg")  # Save annotated image
-"""
+# Run inference with specified device, available devices: ["intel:gpu", "intel:npu", "intel:cpu"]
+results = ov_model("https://ultralytics.com/images/bus.jpg", device="intel:gpu")
